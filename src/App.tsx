@@ -7,7 +7,7 @@ const movies = [
     title: "The Force Awakens",
     episode: "Episode VII",
     year: 2015,
-    posterUrl: "https://image.tmdb.org/t/p/w500/weUSwMdQIa3NaXVzwUoIIcAi85d.jpg",
+    posterUrl: "https://image.tmdb.org/t/p/w600_and_h900_face/66mKo4tPUWpW6EFTr8onJ7J1FBN.jpg",
     sentiment: 78,
     sentimentLabel: "Positive"
   },
@@ -46,10 +46,10 @@ function App() {
         {/* Hero Section */}
         <section className="relative py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl text-center">
-            <div className="mb-6 opacity-0 animate-[fadeInUp_1s_ease-out_0.2s_forwards] flex justify-center">
+            <div className="mb-16 opacity-0 animate-[fadeInUp_1s_ease-out_0.2s_forwards] flex justify-center">
               <Logo size="xl" showTagline />
             </div>
-            <p className="text-xl sm:text-2xl text-gray-300 mb-4 opacity-0 animate-[fadeInUp_1s_ease-out_0.4s_forwards]">
+            <p className="text-xl sm:text-2xl text-gray-300 mb-4 mt-8 opacity-0 animate-[fadeInUp_1s_ease-out_0.4s_forwards]">
               The sequel trilogy split the fandom.
             </p>
             <p className="text-lg sm:text-xl text-gray-400 mb-8 opacity-0 animate-[fadeInUp_1s_ease-out_0.6s_forwards]">

@@ -30,7 +30,13 @@ export function MovieCard({ title, episode, year, posterUrl, sentiment, sentimen
           >
             {sentiment}% {sentimentLabel}
           </Badge>
-          <Button className="w-full bg-primary/90 hover:bg-primary text-primary-foreground">
+          <Button 
+            className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold"
+            onClick={() => {
+              // TODO: Implement view opinions functionality
+              console.log(`View opinions for ${title}`)
+            }}
+          >
             View Opinions
           </Button>
         </div>
