@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Force Divided Logo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .text-part {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+            transition: all 0.3s ease;
+        }
+
+        .red-side {
+            color: #ff3e3e;
+            text-shadow: 0 0 10px rgba(255, 62, 62, 0.5), 0 0 20px rgba(255, 62, 62, 0.3);
+        }
+
+        .blue-side {
+            color: #3e94ff;
+            text-shadow: 0 0 10px rgba(62, 148, 255, 0.5), 0 0 20px rgba(62, 148, 255, 0.3);
+        }
+
+        /* The Divider Icon */
+        .divider {
+            font-size: 4rem !important;
+            position: relative;
+            background: linear-gradient(to right, #ff3e3e 50%, #3e94ff 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 8px white);
+            transform: rotate(180deg);
+        }
+
+        .glow-line {
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            bottom: 10%;
+            width: 2px;
+            background: white;
+            box-shadow: 0 0 15px 2px white;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .tagline {
+            position: absolute;
+            bottom: -2rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            letter-spacing: 0.5em;
+        }
+
+        /* Animation for a subtle hum effect */
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+
+        .lightsaber-glow {
+            animation: flicker 0.15s infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <!-- Force -->
+        <div class="text-part red-side">Force</div>
+        
+        <!-- Icon Divider -->
+        <div class="relative flex items-center justify-center">
+            <span class="material-icons divider">bolt</span>
+            <div class="glow-line lightsaber-glow"></div>
+        </div>
+
+        <!-- Divided -->
+        <div class="text-part blue-side">Divided</div>
+
+        <div class="tagline">BALANCE IS BROKEN</div>
+    </div>
+
+</body>
+</html>
