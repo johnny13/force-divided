@@ -1,6 +1,7 @@
 import { MovieCard } from "@/components/MovieCard"
 import { Header } from "@/components/Header"
 import { Logo } from "@/components/Logo"
+import { EpicSpaceBackground } from "@/components/EpicSpaceBackground"
 
 const movies = [
   {
@@ -32,13 +33,7 @@ const movies = [
 function App() {
   return (
     <div className="min-h-screen bg-black text-gray-100 w-full relative overflow-x-hidden">
-      {/* Starry background */}
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-black to-black pointer-events-none" />
-      <div className="fixed inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cmFkaWFsR3JhZGllbnQgaWQ9ImEiIGN4PSI1MCUiIGN5PSI1MCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHBhdGggZD0iTTEwMCAxMDBIMTAwdjEwMEgxMDB6IiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+')] opacity-20 pointer-events-none" />
-      
-      {/* Subtle lightsaber glow effect */}
-      <div className="fixed top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent pointer-events-none" />
-      <div className="fixed bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-500/50 to-transparent pointer-events-none" />
+      <EpicSpaceBackground />
 
       <Header />
 
