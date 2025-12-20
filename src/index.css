@@ -59,14 +59,24 @@ a:hover {
   color: #535bf2;
 }
 
+html {
+  background-color: transparent;
+}
+
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: transparent;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Orbitron', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Orbitron", sans-serif;
   font-weight: 700;
 }
 
@@ -81,7 +91,7 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -187,29 +197,40 @@ button:focus-visible {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-color: transparent;
   }
-  
+
   /* Apply Orbitron to all headings */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Orbitron", sans-serif;
     font-weight: 700;
   }
-  
+
   /* Apply Orbitron to buttons and UI components */
   button,
   [role="button"],
   .btn,
   input[type="button"],
   input[type="submit"] {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
   }
 }
 
 /* Starry background animation */
 @keyframes twinkle {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
@@ -224,8 +245,43 @@ button:focus-visible {
 }
 
 @keyframes flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.85; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+/* Star field animations for forward-moving effect */
+@keyframes stars-slow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100px;
+  }
+}
+
+@keyframes stars-fast {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 150px;
+  }
+}
+
+/* Star animation classes */
+.stars-slow {
+  animation: stars-slow 120s linear infinite;
+  will-change: background-position;
+}
+
+.stars-fast {
+  animation: stars-fast 40s linear infinite;
+  will-change: background-position;
 }
 
 .star {
